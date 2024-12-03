@@ -54,14 +54,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jerzyadamowski/aws4-express.git"
+    "url": "git+https://github.com/FilenCloudDienste/aws4-express.git"
   },
   "author": "Jerzy Adamowski",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/jerzyadamowski/aws4-express/issues"
+    "url": "https://github.com/FilenCloudDienste/aws4-express/issues"
   },
-  "homepage": "https://github.com/jerzyadamowski/aws4-express#readme",
+  "homepage": "https://github.com/FilenCloudDienste/aws4-express#readme",
   "prettier": "./prettier",
   "eslintConfig": {
     "extends": "./.eslintrc.js"

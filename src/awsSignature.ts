@@ -230,7 +230,7 @@ export class AwsSignature {
     const xAmzDate = req.header(Headers.XAmzDate);
     const xAmzExpires = Number(req.header(Headers.XAmzExpires));
     const contentSha256 = req.header(Headers.XAmzContentSha256);
-    const bodyHash = contentSha256 || this.hash((req as any).rawBody ?? '');
+    const bodyHash = contentSha256 || this.hashBuffer((req as any).rawBody ?? '');
     const { path, query } = this.parsePath(req.url);
     const method = req.method;
 
@@ -454,6 +454,8 @@ export class AwsSignature {
     crypto.createHmac('sha256', secretKey).update(data, 'utf8').digest();
 
   protected hash = (data: string) => crypto.createHash('sha256').update(data, 'utf8').digest('hex');
+
+  protected hashBuffer = (data: Buffer) => crypto.createHash('sha256').update(data).digest('hex');
 
   protected expires = (dateTime: string, expires: number | undefined): boolean => {
     if (!expires) {

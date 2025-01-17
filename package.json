@@ -1,8 +1,9 @@
 {
-  "name": "aws4-express",
+  "name": "@filen/aws4-express",
   "version": "0.10.2",
   "description": "Express middleware handlers for validation AWS Signature V4",
   "main": "dist/index.js",
+  "private": false,
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
